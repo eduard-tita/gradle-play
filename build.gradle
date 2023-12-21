@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'org.sonatype.gradle.plugins.scan' version '2.6.1'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:log4j-over-slf4j:1.7.36'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+}
+
+nexusIQScan {
+    username = 'admin' 
+    password = 'qzBt29pMc7'
+    serverUrl = 'http://localhost:8070'
+    applicationId = 'iq-app-01'
+    stage = 'build' 
+    allConfigurations = false 
+}
