@@ -5,7 +5,7 @@ pipeline {
         stage('Create module.xml') { 
             tools {
                 jdk 'Java 8'
-                maven 'Maven'
+                gradle 'Gradle'
             }
             steps {
                 sh 'gradle nexusIQIndex'                 
